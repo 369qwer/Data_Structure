@@ -97,3 +97,16 @@ int LocateElem_Sq(SqList L, ElemType e, Compare myCompare) {
 	if (i <= L.length)return i;
 	return 0;
 }
+//pre_e·µ»ØÇ°Çý
+Status PriorElem(SqList L, ElemType cur_e, ElemType& pre_e) {
+	if (L.length < 2)return ERROR;
+	int found = 0;
+	for (int i = 1; i < L.length; i++) {
+		if (L.elem[i] == cur_e) {
+			pre_e = L.elem[i - 1];
+			found = 1;
+			break;
+		}
+	}
+	return found ? OK : ERROR;
+}
