@@ -4,6 +4,8 @@
 
 # 环境
 
+windows 10
+
 Visual Studio 2019
 
 cmake  3.29.2
