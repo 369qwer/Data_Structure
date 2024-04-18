@@ -7,3 +7,6 @@
 Visual Studio 2019
 
 cmake  3.29.2
+
+# 可能遇到的问题
+
