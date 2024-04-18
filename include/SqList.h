@@ -88,12 +88,3 @@ Status ListDelete_Sq(SqList& L, int i, ElemType &e) {
 	--L.length;//表长减一
 	return OK;
 }
-//在顺序线性表L中查找第一个值与e满足compare（）元素的位序
-int LocateElem_Sq(SqList L, ElemType e, Compare myCompare) {
-	//若找到，返回L中的位序，否则返回0
-	int i = 1;
-	ElemType *p = L.elem;
-	while (i <= L.length && !myCompare(*p++, e))++i;
-	if (i <= L.length)return i;
-	return 0;
-}

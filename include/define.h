@@ -11,5 +11,3 @@
 typedef int Status;
 
 typedef int ElemType;//int 可更换为需要的数据类型
-
-typedef Status(*Compare)(ElemType, ElemType); // 定义了一个名为Compare的指向函数的指针类型

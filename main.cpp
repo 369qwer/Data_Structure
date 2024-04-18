@@ -1,5 +1,4 @@
 #include"include/SqList.h"
-#include"MyFun.h"
 #include<iostream>
 int main() {
 	SqList S;
@@ -14,7 +13,6 @@ int main() {
 	std::cout <<w<<std::endl;
 	std::cout << x << std::endl;
 	std::cout << ListEmpty_Sq(S)<<std::endl;	
-	Compare f = ComparisonFunction;
-	std::cout << LocateElem_Sq(S, 1, f) << std::endl;
+
 	return OK;
 }
