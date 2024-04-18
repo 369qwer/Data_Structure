@@ -12,6 +12,7 @@ cmake  3.29.2
 
 # 可能遇到的问题
 
+## CMake的安装(https://blog.csdn.net/sanqima/article/details/132634898?ops_request_misc=&request_id=&biz_id=102&utm_term=cmake%20windows&utm_medium=distribute.pc_search_result.none-task-blog-2~all~sobaiduweb~default-0-132634898.142^v100^pc_search_result_base7&spm=1018.2226.3001.4187)
 
 # 后续提交
 
