@@ -89,7 +89,7 @@ Status ListDelete_Sq(SqList& L, int i, ElemType &e) {
 	return OK;
 }
 //在顺序线性表L中查找第一个值与e满足compare（）元素的位序
-int LocateElem_Sq(SqList L, ElemType e, Compare myCompare) {
+int LocateElem_Sq(const SqList& L, ElemType e, Compare myCompare) {
 	//若找到，返回L中的位序，否则返回0
 	int i = 1;
 	ElemType *p = L.elem;
@@ -98,7 +98,7 @@ int LocateElem_Sq(SqList L, ElemType e, Compare myCompare) {
 	return 0;
 }
 //pre_e返回前驱
-Status PriorElem(SqList L, ElemType cur_e, ElemType& pre_e) {
+Status PriorElem_Sq(const SqList& L, ElemType cur_e, ElemType& pre_e) {
 	if (L.length < 2)return ERROR;
 	int found = 0;
 	for (int i = 1; i < L.length; i++) {
@@ -109,4 +109,24 @@ Status PriorElem(SqList L, ElemType cur_e, ElemType& pre_e) {
 		}
 	}
 	return found ? OK : ERROR;
+}
+//next_e返回后继
+Status NextElem_Sq(const SqList& L, ElemType cur_e, ElemType& next_e) {
+	if (L.length <1)return ERROR;
+
+	for (int i = 0; i < L.length - 1; i++) {  // 只需遍历到倒数第二个元素
+		if (L.elem[i] == cur_e) {             // 找到当前元素
+			next_e = L.elem[i + 1];           // 后继元素
+			return OK;
+		}
+	}
+	return ERROR;
+}
+//依次调用visit()
+Status ListTraverse_Sq(const SqList& L,Visit myVisit){
+	if (L.elem==nullptr)return ERROR;
+	for(int i=0;i<L.length;i++){
+		if (myVisit(L.elem[i]) != OK)return ERROR;
+	}
+	return OK;
 }
