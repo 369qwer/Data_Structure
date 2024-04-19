@@ -45,15 +45,17 @@ cmake  3.29.2
   ```
   cmake ..
   ```
+ ![](https://github.com/369qwer/Data_Structure/blob/master/Sample%20Photos/%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE%202024-04-19%20131646.png)
+  
 - 打开SqList.sln
 
    ![]()
 - 设置启动项
 
-   ![]()
+   ![](https://github.com/369qwer/Data_Structure/blob/master/Sample%20Photos/%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE%202024-04-19%20131738.png)
 - 进行调试
 
-   ![]()
+   ![](https://github.com/369qwer/Data_Structure/blob/master/Sample%20Photos/%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE%202024-04-19%20131819.png)
   
 
 # 后续提交
