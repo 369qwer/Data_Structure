@@ -1,5 +1,5 @@
 cmake_minimum_required(VERSION 3.10)
-project(List)
+project(SqList)
+include_directories(../include)	# 搜索头文件方式
 
-add_library(SqList STATIC SqList.cpp)
-target_include_directories(SqList PUBLIC ../include)
+add_executable(SqListmain_app SqListmain.cpp)

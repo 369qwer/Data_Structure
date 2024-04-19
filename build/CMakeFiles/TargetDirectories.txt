@@ -1,8 +1,3 @@
 D:/C++Project/数据结构/build/CMakeFiles/main_app.dir
 D:/C++Project/数据结构/build/CMakeFiles/ALL_BUILD.dir
 D:/C++Project/数据结构/build/CMakeFiles/ZERO_CHECK.dir
-D:/C++Project/数据结构/build/List/CMakeFiles/List.dir
-D:/C++Project/数据结构/build/List/CMakeFiles/ALL_BUILD.dir
-D:/C++Project/数据结构/build/SqList/CMakeFiles/SqList.dir
-D:/C++Project/数据结构/build/Stack/CMakeFiles/Stack.dir
-D:/C++Project/数据结构/build/Stack/CMakeFiles/ALL_BUILD.dir
