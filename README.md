@@ -8,6 +8,7 @@
 - [环境](#环境)
 - [可能遇到的问题](#可能遇到的问题)
   - [CMake的安装](#CMake的安装)
+- [配置](#配置)
 - [后续提交](#后续提交)
 
 
@@ -31,8 +32,10 @@ cmake  3.29.2
 
 - 进入SqList文件下的build目录
 
-   ![build](https://github.com/369qwer/Data_Structure/blob/master/Sample%20Photos/%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE%202024-04-19%20130505.png)
-- 
+   ![](https://github.com/369qwer/Data_Structure/blob/master/Sample%20Photos/%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE%202024-04-19%20130505.png)
+- 清空build
+
+  ![]()
 
 # 后续提交
 
