@@ -40,7 +40,7 @@ cmake  3.29.2
 
    ![](https://github.com/369qwer/Data_Structure/blob/master/Sample%20Photos/%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE%202024-04-19%20130554.png)
 
-  -使用cmake编译
+  - 使用cmake编译
   
   ```
   cmake ..
@@ -48,10 +48,10 @@ cmake  3.29.2
 - 打开SqList.sln
 
    ![]()
-  - 设置启动项
+- 设置启动项
 
    ![]()
-  - 进行调试
+- 进行调试
 
    ![]()
   
