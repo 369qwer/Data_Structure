@@ -1,11 +1,11 @@
-#pragma once
+ï»¿#pragma once
 #include"define.h"
 #include<iostream>
-//±È½Ïº¯Êý
+//æ¯”è¾ƒå‡½æ•°
 Status ComparisonFunction(ElemType a, ElemType b) {
     return (a == b) ? TRUE : FALSE;
 }
-//·ÃÎÊº¯Êý
+//è®¿é—®å‡½æ•°
 Status VisitFunction(ElemType a) {
     std::cout << a << std::endl;
     return TRUE;

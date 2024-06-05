@@ -1,16 +1,16 @@
-#pragma once
+ï»¿#pragma once
 
-//º¯Êı½á¹û×´Ì¬´úÂë
+//å‡½æ•°ç»“æœçŠ¶æ€ä»£ç 
 #define TRUE 1
 #define FALSE 0
 #define OK 1
 #define ERROR 0
 #define INFEASIBLE -1
 #define OVERFLOW -2
-//status ÊÇº¯ÊıÀàĞÍ£¬ÖµÎªº¯Êı½á¹û×´Ì¬´úÂë
+//status æ˜¯å‡½æ•°ç±»å‹ï¼Œå€¼ä¸ºå‡½æ•°ç»“æœçŠ¶æ€ä»£ç 
 typedef int Status;
 
-typedef int ElemType;//int ¿É¸ü»»ÎªĞèÒªµÄÊı¾İÀàĞÍ
+typedef int ElemType;//int å¯æ›´æ¢ä¸ºéœ€è¦çš„æ•°æ®ç±»å‹
 
-typedef Status(*Compare)(ElemType, ElemType); // ¶¨ÒåÁËÒ»¸öÃûÎªCompareµÄÖ¸Ïòº¯ÊıµÄÖ¸ÕëÀàĞÍ
-typedef Status(*Visit)(ElemType);//¶¨ÒåÁËÒ»¸öÃûÎªVisitµÄÖ¸Ïòº¯ÊıµÄÖ¸ÕëÀàĞÍ
+typedef Status(*Compare)(ElemType, ElemType); // å®šä¹‰äº†ä¸€ä¸ªåä¸ºCompareçš„æŒ‡å‘å‡½æ•°çš„æŒ‡é’ˆç±»å‹
+typedef Status(*Visit)(ElemType);//å®šä¹‰äº†ä¸€ä¸ªåä¸ºVisitçš„æŒ‡å‘å‡½æ•°çš„æŒ‡é’ˆç±»å‹

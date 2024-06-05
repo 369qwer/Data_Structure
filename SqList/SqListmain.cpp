@@ -1,19 +1,29 @@
-//ÏßĞÔ±íµÄ¶¯Ì¬·ÖÅäË³Ğò´æ´¢½á¹¹
+ï»¿//çº¿æ€§è¡¨çš„åŠ¨æ€åˆ†é…é¡ºåºå­˜å‚¨ç»“æ„
 
 #include"../include/SqList.h"
 
 #include"MyFun.h"
 #include<iostream>
 int main() {
-	SqList S;
+	SqList S1;
+	SqList S2;
+	SqList S3;
 	int w, x;
-	InitList_Sq(S);
-	//²åÈëÔªËØ
-	ListInsert_Sq(S, 1, 5);
-	ListInsert_Sq(S, 2, 66);
-	ListInsert_Sq(S, 3, 555);
+	InitList_Sq(S1);
+	InitList_Sq(S2);
+	//æ’å…¥å…ƒç´ 
+	ListInsert_Sq(S1, 1, 5);
+	ListInsert_Sq(S1, 2, 66);
+	ListInsert_Sq(S2, 1, 555);
 
-	//std::cout << ListLength(S) << std::endl;
+	//æµ‹è¯•å½’å¹¶
+	MergeList_Sq(S1, S2, S3);
+	std::cout << ListLength_Sq(S3) << std::endl;
+	
+	
+	ListTraverse_Sq(S3, VisitFunction);
+
+	//std::cout << ListLength_Sq((S) << std::endl;
 	//std::cout << w << std::endl;
 	//std::cout << DestroyList_Sq(S)<<std::endl;
 	//GetElem_Sq(S, 1, w);
@@ -21,23 +31,23 @@ int main() {
 	//std::cout << x << std::endl;
 	//std::cout << ListEmpty_Sq(S)<<std::endl;	
 
-	//²âÊÔÇ°Çı¡¢ºó¼Ìº¯Êı
-#if 1
+	//æµ‹è¯•å‰é©±ã€åç»§å‡½æ•°
+#if 0
 	PriorElem_Sq(S, 555, w);
 	std::cout << w << std::endl;
 	NextElem_Sq(S, 5, x);
 	std::cout << x << std::endl;
 #endif
 
-	//²âÊÔLocateElem_Sq²éÕÒµÚÒ»¸öÖµÓëeÂú×ãcompare£¨£©ÔªËØµÄÎ»Ğò
+	//æµ‹è¯•LocateElem_SqæŸ¥æ‰¾ç¬¬ä¸€ä¸ªå€¼ä¸eæ»¡è¶³compareï¼ˆï¼‰å…ƒç´ çš„ä½åº
 #if 0
 	std::cout << LocateElem_Sq(S, 66, ComparisonFunction);
 #endif 
 
-	//²âÊÔ ListTraverse_SqÒÀ´Îµ÷ÓÃvisit()
-#if 0
-	ListTraverse_Sq(S, VisitFunction);
-#endif // 1
+	//æµ‹è¯• ListTraverse_Sqä¾æ¬¡è°ƒç”¨visit()
+
+
+
 
 	return OK;
 }
