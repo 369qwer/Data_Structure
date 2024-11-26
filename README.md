@@ -29,18 +29,16 @@ Data_Structure/ # 项目根目录
 >> Queue.cpp # 队列实现文件  
 >> Tree.cpp # 树实现文件  
 >> main.cpp # 主程序入口（如果有）  
-├── test/ # 存放单元测试文件  
-│ ├── test_linklist.cpp # 链表单元测试  
-│ ├── test_stack.cpp # 栈单元测试  
-│ ├── test_queue.cpp # 队列单元测试  
-│ └── test_tree.cpp # 树单元测试  
-├── examples/ # 存放示例程序  
-│ ├── example_linklist.cpp # 链表示例程序  
-│ ├── example_stack.cpp # 栈示例程序  
-│ └── example_queue.cpp # 队列示例程序  
-├── scripts/ # 存放构建、测试脚本  
-│ └── build.sh # 自动化构建脚本  
-└── .gitignore # Git 忽略文件，列出不需要纳入版本控制的文件类型 
+> test/ # 存放单元测试文件  
+>> test_linklist.cpp # 链表单元测试  
+>> test_stack.cpp # 栈单元测试  
+>> test_queue.cpp # 队列单元测试  
+>> test_tree.cpp # 树单元测试  
+> examples/ # 存放示例程序  
+>> example_linklist.cpp # 链表示例程序  
+>> example_stack.cpp # 栈示例程序  
+>> example_queue.cpp # 队列示例程序  
+
 
 # 环境
 
