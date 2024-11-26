@@ -1,7 +1,7 @@
 # 数据结构
 
 基于《数据结构（C语言版）》清华大学出版社
-
+这是一个用于学习和实现常见数据结构的项目，包含了链表、栈、队列、树等常见数据结构的实现。
 
 # 目录
 - [数据结构](#数据结构)
@@ -12,6 +12,8 @@
 - [后续提交](#后续提交)
 
 
+# 目录结构
+Data_Structure/ # 项目根目录 ├── CMakeLists.txt # CMake 构建文件，定义构建规则 ├── README.md # 项目说明文件，包含项目简介、安装、使用说明 ├── docs/ # 项目文档，包含数据结构设计文档、项目说明等 │ └── index.md # 项目文档首页 ├── include/ # 存放所有头文件 │ ├── LinkList.h # 链表头文件 │ ├── Stack.h # 栈头文件 │ ├── Queue.h # 队列头文件 │ └── Tree.h # 树头文件 ├── src/ # 存放所有源文件（.cpp） │ ├── LinkList.cpp # 链表实现文件 │ ├── Stack.cpp # 栈实现文件 │ ├── Queue.cpp # 队列实现文件 │ ├── Tree.cpp # 树实现文件 │ └── main.cpp # 主程序入口（如果有） ├── test/ # 存放单元测试文件 │ ├── test_linklist.cpp # 链表单元测试 │ ├── test_stack.cpp # 栈单元测试 │ ├── test_queue.cpp # 队列单元测试 │ └── test_tree.cpp # 树单元测试 ├── examples/ # 存放示例程序 │ ├── example_linklist.cpp # 链表示例程序 │ ├── example_stack.cpp # 栈示例程序 │ └── example_queue.cpp # 队列示例程序 ├── scripts/ # 存放构建、测试脚本 │ └── build.sh # 自动化构建脚本 └── .gitignore # Git 忽略文件，列出不需要纳入版本控制的文件类型
 # 环境
 
 windows 10

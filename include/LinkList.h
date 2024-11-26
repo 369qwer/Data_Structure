@@ -14,7 +14,7 @@ typedef struct LNode {
 Status CreateList_L(LinkList& L,int n) {
 	L = (LinkList)malloc(sizeof(LNode));
 	L->next = nullptr;//先建立一个带头结点的单链表
-	std::cout << "enter " << n << " elem:";
+	std::cout << "enter " << n << " elem（逆序位输入）:";
 	for (int i = n; i >0; i--)
 	{
 		LinkList p = (LinkList)malloc(sizeof(LNode));//生成新结点
@@ -77,11 +77,6 @@ void MergeList_L(LinkList &La, LinkList &Lb, LinkList& Lc) {
 	free(Lb);
 }
 
-//在顺序线性表L中查找第一个值与e满足compare（）元素的位序
-int LocateElem_L(const LinkList& L, ElemType e, Compare myCompare) {
-	
-	return 0;
-}
 
 //依次调用visit()
 Status ListTraverse_L(LinkList L, Visit myVisit) {
