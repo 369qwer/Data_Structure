@@ -56,6 +56,14 @@ cmake  3.29.2
 
 直通点：[戳这里](https://blog.csdn.net/sanqima/article/details/132634898?ops_request_misc=&request_id=&biz_id=102&utm_term=cmake%20windows&utm_medium=distribute.pc_search_result.none-task-blog-2~all~sobaiduweb~default-0-132634898.142^v100^pc_search_result_base7&spm=1018.2226.3001.4187)
 
+## vs2019中文乱码及含有换行符
+
+直通点：[戳这里](https://blog.csdn.net/weixin_44153180/article/details/127592831?ops_request_misc=%257B%2522request%255Fid%2522%253A%252248d51ab21c1ba9fdf459c4d2ddee6c52%2522%252C%2522scm%2522%253A%252220140713.130102334..%2522%257D&request_id=48d51ab21c1ba9fdf459c4d2ddee6c52&biz_id=0&utm_medium=distribute.pc_search_result.none-task-blog-2~all~baidu_landing_v2~default-1-127592831-null-null.142^v100^pc_search_result_base1&utm_term=vs2019%20%E6%8F%90%E7%A4%BA%E5%B8%B8%E9%87%8F%E4%B8%AD%E6%9C%89%E6%8D%A2%E8%A1%8C%E7%AC%A6&spm=1018.2226.3001.4187)
+
+## 高级保存选项
+
+直通点：[戳这里](https://blog.csdn.net/L_Andy/article/details/126425393?ops_request_misc=%257B%2522request%255Fid%2522%253A%252238c4b6dddfb7e703ce1e5bf3f5092b47%2522%252C%2522scm%2522%253A%252220140713.130102334..%2522%257D&request_id=38c4b6dddfb7e703ce1e5bf3f5092b47&biz_id=0&utm_medium=distribute.pc_search_result.none-task-blog-2~all~sobaiduend~default-1-126425393-null-null.142^v100^pc_search_result_base1&utm_term=vs2019%E7%9A%84%E9%AB%98%E7%BA%A7%E4%BF%9D%E5%AD%98%E9%80%89%E9%A1%B9&spm=1018.2226.3001.4187)
+
 # 配置
 
 
