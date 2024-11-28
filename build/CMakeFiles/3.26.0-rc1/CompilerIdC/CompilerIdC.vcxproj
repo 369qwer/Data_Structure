@@ -8,7 +8,7 @@
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <ProjectGuid>{CAE07175-D007-4FC3-BFE8-47B392814159}</ProjectGuid>
-    <RootNamespace>CompilerIdCXX</RootNamespace>
+    <RootNamespace>CompilerIdC</RootNamespace>
     <Keyword>Win32Proj</Keyword>
     
     
@@ -18,15 +18,14 @@
     
     
   </PropertyGroup>
-  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
   
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
   <PropertyGroup>
     <PreferredToolArchitecture>x64</PreferredToolArchitecture>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
     <ConfigurationType>Application</ConfigurationType>
     <PlatformToolset>v142</PlatformToolset>
-    
     <CharacterSet>MultiByte</CharacterSet>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
@@ -45,7 +44,7 @@
       <PreprocessorDefinitions>%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <MinimalRebuild>false</MinimalRebuild>
       <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
-      <RuntimeLibrary Condition="'$(ApplicationType)'!='Android'">MultiThreadedDebugDLL</RuntimeLibrary>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
       <PrecompiledHeader>
       </PrecompiledHeader>
       <WarningLevel>TurnOffAllWarnings</WarningLevel>
@@ -59,11 +58,11 @@
       
     </Link>
     <PostBuildEvent>
-      <Command>for %%i in (cl.exe) do %40echo CMAKE_CXX_COMPILER=%%~$PATH:i</Command>
+      <Command>for %%i in (cl.exe) do %40echo CMAKE_C_COMPILER=%%~$PATH:i</Command>
     </PostBuildEvent>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="CMakeCXXCompilerId.cpp" />
+    <ClCompile Include="CMakeCCompilerId.c" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

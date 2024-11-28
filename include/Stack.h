@@ -1,7 +1,7 @@
 #pragma once
-#include"../include/List.h"
+//#include"List.h"
 /* 基于链表实现的栈 */
-class LinkedListStack
+/*class LinkedListStack
 {
 public:
 	LinkedListStack() {
@@ -15,4 +15,4 @@ public:
 private:
 	ListNode* stackTop;// 将头节点作为栈顶
 	int stkSize;// 栈的长度
-};
+};*/

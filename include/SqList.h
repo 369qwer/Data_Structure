@@ -25,8 +25,7 @@ Status InitList_Sq(SqList& L) {
 //销毁线性表
 Status DestroyList_Sq(SqList& L)
 {
-	if (!L.elem) {
-
+	if (L.elem) {
 		free(L.elem);
 		L.elem = nullptr;
 		L.length = 0;
@@ -68,7 +67,7 @@ Status ListInsert_Sq(SqList& L, int i, ElemType e) {
 		L.listsize += LISTINCREMENT;
 	}
 	//将i后的值后移
-	for (int j = L.length; j > i; j--)
+	for (int j = L.length; j >= i; j--)
 	{
 		L.elem[j] = L.elem[j - 1];
 	}
@@ -135,6 +134,7 @@ Status ListTraverse_Sq( SqList L,Visit myVisit){
 
 //合并两个顺序线性表
 void MergeList_Sq(SqList La, SqList Lb, SqList& Lc) {
+	if (!La.elem || !Lb.elem) return;
 	ElemType* pa = La.elem;
 	ElemType* pb = Lb.elem;
 	Lc.listsize = Lc.length = La.length + Lb.length;

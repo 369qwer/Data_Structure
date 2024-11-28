@@ -39,10 +39,7 @@ Data_Structure/ # 项目根目录
 >> test_queue.cpp # 队列单元测试  
 >> test_tree.cpp # 树单元测试  
 
-> examples/ # 存放示例程序  
->> example_linklist.cpp # 链表示例程序  
->> example_stack.cpp # 栈示例程序  
->> example_queue.cpp # 队列示例程序  
+> build/ #构建文件
 
 
 # 环境
@@ -61,9 +58,9 @@ cmake  3.29.2
 
 # 配置
 
-## 以SqList为例
 
-- 进入SqList文件下的build目录
+
+- 进入build目录
 
    ![](https://github.com/369qwer/Data_Structure/blob/master/Sample%20Photos/%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE%202024-04-19%20130505.png)
 - 清空build

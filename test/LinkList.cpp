@@ -1,5 +1,8 @@
-﻿#include"LinkList.h"
+#pragma once
+
+#include"LinkList.h"
 #include<iostream>
+#if 0
 int main() {
 	LinkList L1;
 	LinkList L2;
@@ -17,3 +20,4 @@ int main() {
 	//std::cout << e << std::endl;
 	return 0;
 }
+#endif

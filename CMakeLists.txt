@@ -1,7 +1,14 @@
 cmake_minimum_required(VERSION 3.10)
-project(data_structure LANGUAGES CXX)
+project(data_structure)
 
 set(CMAKE_CXX_STANDARD 11)
-include_directories(./include)	# 搜索头文件方式
 
-add_executable(main_app main.cpp)
+# 包含头文件目录
+include_directories(${PROJECT_SOURCE_DIR}/include)
+
+# 添加src目录
+add_subdirectory(src)
+
+# 添加test目录
+add_subdirectory(test)
+
