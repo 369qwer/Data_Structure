@@ -41,7 +41,7 @@ Data_Structure/ # 项目根目录
 >> test_queue.cpp # 队列单元测试  
 >> test_tree.cpp # 树单元测试  
 
-> build/ #构建文件
+> build/ #构建目录
 
 
 # 环境
