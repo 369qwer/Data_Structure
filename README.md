@@ -62,20 +62,20 @@ cmake  3.29.2
 
 - 进入build目录
 
-   ![]([https://github.com/369qwer/Data_Structure/blob/master/Sample%20Photos/1.png])
+   ![](https://github.com/369qwer/Data_Structure/blob/master/Sample%20Photos/1.png)
 - 清空build
 
-   ![]([https://github.com/369qwer/Data_Structure/blob/master/Sample%20Photos/%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE%202024-04-19%20130543.png](https://github.com/369qwer/Data_Structure/blob/master/Sample%20Photos/2.png))
+   ![](https://github.com/369qwer/Data_Structure/blob/master/Sample%20Photos/2.png)
 - 进入cmd
 
-   ![](https://github.com/369qwer/Data_Structure/blob/master/Sample%20Photos/%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE%202024-04-19%20130554.png)
+   ![](https://github.com/369qwer/Data_Structure/blob/master/Sample%20Photos/3.png)
 
 - 使用cmake编译
   
   ```
   cmake ..
   ```
- ![](https://github.com/369qwer/Data_Structure/blob/master/Sample%20Photos/%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE%202024-04-19%20131646.png)
+ ![](https://github.com/369qwer/Data_Structure/blob/master/Sample%20Photos/4.png)
   
 - 打开SqList.sln
 
