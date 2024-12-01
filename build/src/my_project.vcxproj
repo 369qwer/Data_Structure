@@ -269,9 +269,7 @@ if %errorlevel% neq 0 goto :VCEnd</Command>
     </CustomBuild>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="D:\Users\Administrator\Desktop\Data_Structure\src\LinkList.cpp" />
-    <ClCompile Include="D:\Users\Administrator\Desktop\Data_Structure\src\SqList.cpp" />
-    <ClCompile Include="D:\Users\Administrator\Desktop\Data_Structure\src\Stack.cpp" />
+    <ClCompile Include="D:\Users\Administrator\Desktop\Data_Structure\src\main.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="D:\Users\Administrator\Desktop\Data_Structure\build\ZERO_CHECK.vcxproj">

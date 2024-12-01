@@ -1,4 +1,5 @@
-
+#include"LinkList.h"
+#include"SLinkList.h"
 #include "SqList.h"
 #include <iostream>
 using namespace std;
@@ -15,7 +16,7 @@ Status CompareElem(ElemType e1, ElemType e2) {
 
 // 基础功能测试
 void TestBasicOperations() {
-    cout << "=== 测试基础操作 ===\n";
+    cout << "=== 测试Sqlist基础操作 ===\n";
     SqList L;
     // 初始化测试
     if (InitList_Sq(L) == OK) {
@@ -119,9 +120,94 @@ void TestBoundaryConditions() {
     DestroyList_Sq(L);
 }
 
+//测试LinkList
+void TestLinkList() {
+    LinkList L;
+    ElemType e;
+
+    std::cout << "=== 测试创建链表 ===" << std::endl;
+    CreateList_L(L, 5);  // 假设输入: 5 4 3 2 1
+    std::cout << "链表创建完成，顺序输出链表元素：" << std::endl;
+    ListTraverse_L(L, PrintElem);
+    std::cout << std::endl;
+
+    std::cout << "\n=== 测试插入操作 ===" << std::endl;
+    ListInsert_L(L, 3, 99);  // 在第3个位置插入99
+    std::cout << "在位置3插入99后的链表：" << std::endl;
+    ListTraverse_L(L, PrintElem);
+    std::cout << std::endl;
+
+    std::cout << "\n=== 测试获取元素 ===" << std::endl;
+    if (GetElem_L(L, 3, e) == OK) {
+        std::cout << "第3个位置的元素是：" << e << std::endl;
+    }
+
+    std::cout << "\n=== 测试删除操作 ===" << std::endl;
+    if (ListDelete_L(L, 3, e) == OK) {
+        std::cout << "删除第3个位置的元素：" << e << std::endl;
+        std::cout << "删除后的链表：" << std::endl;
+        ListTraverse_L(L, PrintElem);
+        std::cout << std::endl;
+    }
+
+    std::cout << "\n=== 测试合并操作 ===" << std::endl;
+    LinkList L1, L2, L3;
+    std::cout << "创建第一个有序链表：" << std::endl;
+    CreateList_L(L1, 3);  // 假设输入: 5 3 1
+    std::cout << "创建第二个有序链表：" << std::endl;
+    CreateList_L(L2, 3);  // 假设输入: 6 4 2
+
+    std::cout << "第一个链表：" << std::endl;
+    ListTraverse_L(L1, PrintElem);
+    std::cout << "\n第二个链表：" << std::endl;
+    ListTraverse_L(L2, PrintElem);
+
+    MergeList_L(L1, L2, L3);
+    std::cout << "\n合并后的链表：" << std::endl;
+    ListTraverse_L(L3, PrintElem);
+    std::cout << std::endl;
+}
+
+
+
+// 改进打印函数以更清晰地显示结果
+void PrintList(SLinkList& space, int S) {
+    if (!ValidateSLinkList(space, S)) {
+        std::cout << "链表结构异常！" << std::endl;
+        return;
+    }
+
+    int i = space[S].cur;
+    if (i == 0) {
+        std::cout << "空集" << std::endl;
+        return;
+    }
+
+    std::cout << "差集(A-B)∪(B-A)的结果为：";
+    while (i != 0) {
+        std::cout << space[i].data << " ";
+        i = space[i].cur;
+    }
+    std::cout << std::endl;
+}
+
+
+// 改进的测试函数
+void TestSLinkList() {
+    SLinkList space;
+    int S;
+
+    std::cout << "请输入两个集合的元素个数(m n): ";
+    difference(space, S);
+
+    if (ValidateSLinkList(space, S)) {
+        PrintList(space, S);
+    }
+    else {
+        std::cout << "链表创建失败！" << std::endl;
+    }
+}
 int main() {
-    TestBasicOperations();
-    TestMergeList();
-    TestBoundaryConditions();
+    TestSLinkList();
     return 0;
 }

@@ -26,6 +26,22 @@ Status CreateList_L(LinkList& L,int n) {
 	return OK;
 }
 
+//在带头节点的单链线性表中第i个位置插入元素e
+Status ListInsert_L(LinkList& L, int i, ElemType e) {
+	LinkList p = L;
+	int j = 0;
+	while (p&&j < i - 1) {
+		p = p->next; ++j;
+	}
+	if (!p || j > i - 1)return ERROR;
+	LinkList s = (LinkList)malloc(sizeof(LNode));
+	s->data = e;
+	s->next = p->next;
+	p->next = s;
+	return OK;
+}
+
+
 //当第i个元素存在时，赋值给e并返回OK，否则为ERROR
 Status GetElem_L(LinkList L, int i, ElemType& e) {
 	LNode* p = L->next;int j = 1;//初始化，p指向第一个结点，j为计数器
