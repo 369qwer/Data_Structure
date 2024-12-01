@@ -1,0 +1,51 @@
+#include"LinkList.h"
+#include"SLinkList.h"
+#include "SqList.h"
+#include <iostream>
+using namespace std;
+
+
+// �Ľ���ӡ�����Ը���������ʾ���
+
+void PrintList(SLinkList& space, int S) {
+    if (!ValidateSLinkList(space, S)) {
+        std::cout << "�����ṹ�쳣��" << std::endl;
+        return;
+    }
+
+    int i = space[S].cur;
+    if (i == 0) {
+        std::cout << "�ռ�" << std::endl;
+        return;
+    }
+
+    //std::cout << "�(A-B)��(B-A)�Ľ��Ϊ��";
+    while (i != 0) {
+        std::cout << space[i].data << " ";
+        i = space[i].cur;
+    }
+    std::cout << std::endl;
+}
+
+
+// �Ľ��Ĳ��Ժ���
+void TestSLinkList() {
+    SLinkList space;
+    int S;
+
+    std::cout << "�������������ϵ�Ԫ�ظ���(m n): ";
+    difference(space, S);
+
+    if (ValidateSLinkList(space, S)) {
+        PrintList(space, S);
+    }
+    else {
+        std::cout << "��������ʧ�ܣ�" << std::endl;
+    }
+}
+int main() {
+    TestSqList();
+    TestLinkList();
+    //TestSLinkList();
+    return 0;
+}

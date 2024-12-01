@@ -1,4 +1,0 @@
-D:/Users/Administrator/Desktop/Data_Structure/build/CMakeFiles/ALL_BUILD.dir
-D:/Users/Administrator/Desktop/Data_Structure/build/CMakeFiles/ZERO_CHECK.dir
-D:/Users/Administrator/Desktop/Data_Structure/build/src/CMakeFiles/my_project.dir
-D:/Users/Administrator/Desktop/Data_Structure/build/test/CMakeFiles/Tests.dir
