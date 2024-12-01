@@ -4,8 +4,6 @@
 using namespace std;
 
 int main() {
-    TestSqList();
-    TestLinkList();
-    //TestSLinkList();
+    TestDir();
     return 0;
 }

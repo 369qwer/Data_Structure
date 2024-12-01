@@ -2,200 +2,248 @@
 
 #include"LinkList.h"
 #include"SqList.h"
-//#include"MyFun.h"
+#include"SLinkList.h"
 #include<iostream>
+#include<stdexcept>
 using namespace std;
-// ²âÊÔSqList
+
+// æµ‹è¯•SqList
 void TestSqList() {
-    cout << "=== ²âÊÔË³Ğò±íºÍÁ´±í²Ù×÷ ===\n";
+    cout << "=== é¡ºåºè¡¨æµ‹è¯•å¼€å§‹ ===\n";
     
-    // ²âÊÔË³Ğò±í
-    cout << "\n--- ²âÊÔË³Ğò±í ---\n";
+    // åˆå§‹åŒ–é¡ºåºè¡¨
+    cout << "\n--- åˆå§‹åŒ–é¡ºåºè¡¨ ---\n";
     SqList sqList;
     ElemType e;
 
-    // ³õÊ¼»¯²âÊÔ
+    // åˆå§‹åŒ–é¡ºåºè¡¨
     if (InitList_Sq(sqList) == OK) {
-        cout << "Ë³Ğò±í³õÊ¼»¯³É¹¦£¡\n";
+        cout << "é¡ºåºè¡¨åˆå§‹åŒ–æˆåŠŸ\n";
     }
 
-    // ²åÈë²âÊÔ
+    // æ’å…¥å…ƒç´ 
     for (int i = 1; i <= 5; i++) {
         if (ListInsert_Sq(sqList, i, i * 10) == OK) {
-            cout << "²åÈëÔªËØ " << i * 10 << " ³É¹¦£¡\n";
+            cout << "æˆåŠŸæ’å…¥å…ƒç´  " << i * 10 << " åˆ°é¡ºåºè¡¨\n";
         }
     }
 
-    // ±éÀú²âÊÔ
-    cout << "µ±Ç°Ë³Ğò±íÄÚÈİ:";
+    // éå†é¡ºåºè¡¨
+    cout << "é¡ºåºè¡¨å½“å‰å†…å®¹:";
     ListTraverse_Sq(sqList, PrintElem);
     cout << "\n";
 
-    // »ñÈ¡ÔªËØ²âÊÔ
+    // è·å–æŒ‡å®šä½ç½®å…ƒç´ 
     if (GetElem_Sq(sqList, 3, e) == OK) {
-        cout << "Ë³Ğò±íµÚ3¸öÔªËØÊÇ:" << e << "\n";
+        cout << "é¡ºåºè¡¨ä¸­ç¬¬3ä¸ªå…ƒç´ æ˜¯:" << e << "\n";
     }
 
-    // É¾³ı²âÊÔ
+    // åˆ é™¤æŒ‡å®šä½ç½®å…ƒç´ 
     if (ListDelete_Sq(sqList, 2, e) == OK) {
-        cout << "É¾³ıË³Ğò±íµÚ2¸öÔªËØ:" << e << " ³É¹¦£¡\n";
+        cout << "ä»é¡ºåºè¡¨ä¸­åˆ é™¤ç¬¬2ä¸ªå…ƒç´ :" << e << " æˆåŠŸ\n";
     }
 
-    cout << "É¾³ıºóµÄË³Ğò±í:";
+    cout << "åˆ é™¤åçš„é¡ºåºè¡¨:";
     ListTraverse_Sq(sqList, PrintElem);
     cout << "\n";
 
-    // Ë³Ğò±íºÏ²¢²âÊÔ
+    // é¡ºåºè¡¨çš„åˆå¹¶æ“ä½œ
     SqList sqLa, sqLb, sqLc;
     InitList_Sq(sqLa);
     InitList_Sq(sqLb);
     InitList_Sq(sqLc);
 
-    // ÏòsqLa²åÈëÓĞĞòÊı¾İ
+    // ä¸ºsqLaæ’å…¥å‡ ä¸ªå…ƒç´ 
     ListInsert_Sq(sqLa, 1, 1);
     ListInsert_Sq(sqLa, 2, 3);
     ListInsert_Sq(sqLa, 3, 5);
 
-    // ÏòsqLb²åÈëÓĞĞòÊı¾İ
+    // ä¸ºsqLbæ’å…¥å‡ ä¸ªå…ƒç´ 
     ListInsert_Sq(sqLb, 1, 2);
     ListInsert_Sq(sqLb, 2, 4);
     ListInsert_Sq(sqLb, 3, 6);
 
-    cout << "sqLaÄÚÈİ:";
+    cout << "sqLaå†…å®¹:";
     ListTraverse_Sq(sqLa, PrintElem);
     cout << "\n";
 
-    cout << "sqLbÄÚÈİ:";
+    cout << "sqLbå†…å®¹:";
     ListTraverse_Sq(sqLb, PrintElem);
     cout << "\n";
 
-    // ºÏ²¢²âÊÔ
+    // åˆå¹¶æ“ä½œ
     MergeList_Sq(sqLa, sqLb, sqLc);
-    cout << "ºÏ²¢ºósqLcµÄÄÚÈİ:";
+    cout << "åˆå¹¶åsqLcçš„å†…å®¹:";
     ListTraverse_Sq(sqLc, PrintElem);
     cout << "\n";
 
-    // Ë³Ğò±í±ß½çÌõ¼ş²âÊÔ
-    cout << "\n--- Ë³Ğò±í±ß½çÌõ¼ş²âÊÔ ---\n";
+    // é¡ºåºè¡¨çš„è¾¹ç•Œæµ‹è¯•æ¡ˆä¾‹
+    cout << "\n--- é¡ºåºè¡¨è¾¹ç•Œæµ‹è¯•æ¡ˆä¾‹ ---\n";
     SqList sqListBoundary;
     InitList_Sq(sqListBoundary);
 
-    // ¿Õ±í²âÊÔ
+    // ç©ºè¡¨æµ‹è¯•
     if (ListEmpty_Sq(sqListBoundary)) {
-        cout << "Ë³Ğò±íÎª¿Õ\n";
+        cout << "é¡ºåºè¡¨ä¸ºç©º\n";
     }
 
-    // Ô½½ç²âÊÔ
-    cout << "Ô½½ç²åÈë²âÊÔ£¨Î»ÖÃ0£©£º" <<
-        (ListInsert_Sq(sqListBoundary, 0, 100) == ERROR ? "²âÊÔÍ¨¹ı" : "²âÊÔÊ§°Ü") << "\n";
+    // éæ³•ä½ç½®æ’å…¥
+    cout << "æ’å…¥åˆ°ä½ç½®0çš„å…ƒç´ ï¼ˆåº”è¯¥å¤±è´¥ï¼‰:" <<
+        (ListInsert_Sq(sqListBoundary, 0, 100) == ERROR ? "æ’å…¥å¤±è´¥" : "æ’å…¥æˆåŠŸ") << "\n";
 
-    // ²åÈëºóÔÙÉ¾³ı£¬²âÊÔÊÇ·ñÕıÈ·
+    // æ’å…¥å’Œåˆ é™¤å…ƒç´ ï¼Œæ£€æŸ¥é•¿åº¦å˜åŒ–
     ListInsert_Sq(sqListBoundary, 1, 100);
-    cout << "²åÈëÔªËØ100ºó³¤¶È£º" << ListLength_Sq(sqListBoundary) << "\n";
+    cout << "æ’å…¥å…ƒç´ åé•¿åº¦:" << ListLength_Sq(sqListBoundary) << "\n";
     ListDelete_Sq(sqListBoundary, 1, e);
-    cout << "É¾³ıºó³¤¶È£º" << ListLength_Sq(sqListBoundary) << "\n";
+    cout << "åˆ é™¤å…ƒç´ åé•¿åº¦:" << ListLength_Sq(sqListBoundary) << "\n";
 
-    // Ïú»ÙË³Ğò±í
+    // é”€æ¯é¡ºåºè¡¨
     DestroyList_Sq(sqList);
     DestroyList_Sq(sqLa);
     DestroyList_Sq(sqLb);
     DestroyList_Sq(sqLc);
     DestroyList_Sq(sqListBoundary);
 
-    // ²âÊÔÁ´±í
-    cout << "\n--- ²âÊÔÁ´±í ---\n";
-    LinkList linkList;
-
-    cout << "=== ²âÊÔ´´½¨Á´±í ===\n";
-    CreateList_L(linkList, 5);  // ¼ÙÉèÊäÈë: 5 4 3 2 1
-    cout << "Á´±í´´½¨Íê³É£¬Ë³ĞòÊä³öÁ´±íÔªËØ:\n";
-    ListTraverse_L(linkList, PrintElem);
-    cout << "\n";
-
-    cout << "\n=== ²âÊÔÁ´±í²åÈë²Ù×÷ ===\n";
-    ListInsert_L(linkList, 3, 99);  // ÔÚµÚ3¸öÎ»ÖÃ²åÈë99
-    cout << "ÔÚÎ»ÖÃ3²åÈë99ºóµÄÁ´±í:\n";
-    ListTraverse_L(linkList, PrintElem);
-    cout << "\n";
-
-    cout << "\n=== ²âÊÔÁ´±í»ñÈ¡ÔªËØ ===\n";
-    if (GetElem_L(linkList, 3, e) == OK) {
-        cout << "Á´±íµÚ3¸öÎ»ÖÃµÄÔªËØÊÇ:" << e << "\n";
-    }
-
-    cout << "\n=== ²âÊÔÁ´±íÉ¾³ı²Ù×÷ ===\n";
-    if (ListDelete_L(linkList, 3, e) == OK) {
-        cout << "É¾³ıÁ´±íµÚ3¸öÎ»ÖÃµÄÔªËØ:" << e << "\n";
-        cout << "É¾³ıºóµÄÁ´±í:\n";
-        ListTraverse_L(linkList, PrintElem);
-        cout << "\n";
-    }
-
-    cout << "\n=== ²âÊÔÁ´±íºÏ²¢²Ù×÷ ===\n";
-    LinkList linkList1, linkList2, linkList3;
-    cout << "´´½¨µÚÒ»¸öÓĞĞòÁ´±í:\n";
-    CreateList_L(linkList1, 3);  // ¼ÙÉèÊäÈë: 5 3 1
-    cout << "´´½¨µÚ¶ş¸öÓĞĞòÁ´±í:\n";
-    CreateList_L(linkList2, 3);  // ¼ÙÉèÊäÈë: 6 4 2
-
-    cout << "µÚÒ»¸öÁ´±í:\n";
-    ListTraverse_L(linkList1, PrintElem);
-    cout << "\nµÚ¶ş¸öÁ´±í:\n";
-    ListTraverse_L(linkList2, PrintElem);
-
-    MergeList_L(linkList1, linkList2, linkList3);
-    cout << "\nºÏ²¢ºóµÄÁ´±í:\n";
-    ListTraverse_L(linkList3, PrintElem);
-    cout << "\n";
 }
-//²âÊÔLinkList
+
+// æµ‹è¯•LinkList
 void TestLinkList() {
     LinkList L;
     ElemType e;
 
-    std::cout << "=== ²âÊÔ´´½¨Á´±í ===" << std::endl;
-    CreateList_L(L, 5);  // ¼ÙÉèÊäÈë: 5 4 3 2 1
-    std::cout << "Á´±í´´½¨Íê³É£¬Ë³ĞòÊä³öÁ´±íÔªËØ:" << std::endl;
+    std::cout << "=== é“¾è¡¨æµ‹è¯•å¼€å§‹ ===" << std::endl;
+    CreateList_L(L, 5);  // åˆ›å»ºä¸€ä¸ªåŒ…å«5ä¸ªå…ƒç´ çš„é“¾è¡¨: 5 4 3 2 1
+    std::cout << "åˆ›å»ºä¸€ä¸ªåŒ…å«5ä¸ªå…ƒç´ çš„é“¾è¡¨ï¼Œå†…å®¹å¦‚ä¸‹:" << std::endl;
     ListTraverse_L(L, PrintElem);
     std::cout << std::endl;
 
-    std::cout << "\n=== ²âÊÔ²åÈë²Ù×÷ ===" << std::endl;
-    ListInsert_L(L, 3, 99);  // ÔÚµÚ3¸öÎ»ÖÃ²åÈë99
-    std::cout << "ÔÚÎ»ÖÃ3²åÈë99ºóµÄÁ´±í:"<< std::endl;
+    std::cout << "\n=== æµ‹è¯•æ’å…¥æ“ä½œ ===" << std::endl;
+    ListInsert_L(L, 3, 99);  // åœ¨ç¬¬3ä¸ªä½ç½®æ’å…¥å…ƒç´ 99
+    std::cout << "åœ¨ç¬¬3ä¸ªä½ç½®æ’å…¥å…ƒç´ 99åï¼Œé“¾è¡¨å†…å®¹:" << std::endl;
     ListTraverse_L(L, PrintElem);
     std::cout << std::endl;
 
-    std::cout << "\n=== ²âÊÔ»ñÈ¡ÔªËØ ===" << std::endl;
+    std::cout << "\n=== æµ‹è¯•è·å–æŒ‡å®šä½ç½®å…ƒç´  ===" << std::endl;
     if (GetElem_L(L, 3, e) == OK) {
-        std::cout << "µÚ3¸öÎ»ÖÃµÄÔªËØÊÇ:" << e << std::endl;
+        std::cout << "ç¬¬3ä¸ªä½ç½®çš„å…ƒç´ æ˜¯:" << e << std::endl;
     }
 
-    std::cout << "\n=== ²âÊÔÉ¾³ı²Ù×÷ ===" << std::endl;
+    std::cout << "\n=== æµ‹è¯•åˆ é™¤æŒ‡å®šä½ç½®å…ƒç´  ===" << std::endl;
     if (ListDelete_L(L, 3, e) == OK) {
-        std::cout << "É¾³ıµÚ3¸öÎ»ÖÃµÄÔªËØ:" << e << std::endl;
-        std::cout << "É¾³ıºóµÄÁ´±í:" << std::endl;
+        std::cout << "åˆ é™¤çš„ç¬¬3ä¸ªä½ç½®çš„å…ƒç´ æ˜¯:" << e << std::endl;
+        std::cout << "åˆ é™¤åçš„é“¾è¡¨å†…å®¹:" << std::endl;
         ListTraverse_L(L, PrintElem);
         std::cout << std::endl;
     }
 
-    std::cout << "\n=== ²âÊÔºÏ²¢²Ù×÷ ===" << std::endl;
+    std::cout << "\n=== æµ‹è¯•é“¾è¡¨çš„åˆå¹¶æ“ä½œ ===" << std::endl;
     LinkList L1, L2, L3;
-    std::cout << "´´½¨µÚÒ»¸öÓĞĞòÁ´±í:" << std::endl;
-    CreateList_L(L1, 3);  // ¼ÙÉèÊäÈë: 5 3 1
-    std::cout << "´´½¨µÚ¶ş¸öÓĞĞòÁ´±í:" << std::endl;
-    CreateList_L(L2, 3);  // ¼ÙÉèÊäÈë: 6 4 2
+    std::cout << "åˆ›å»ºä¸¤ä¸ªæœ‰åºé“¾è¡¨è¿›è¡Œåˆå¹¶æµ‹è¯•:" << std::endl;
+    CreateList_L(L1, 3);  // åˆ›å»ºä¸€ä¸ªåŒ…å«3ä¸ªå…ƒç´ çš„é“¾è¡¨: 5 3 1
+    std::cout << "åˆ›å»ºç¬¬äºŒä¸ªåŒ…å«3ä¸ªå…ƒç´ çš„é“¾è¡¨:" << std::endl;
+    CreateList_L(L2, 3);  // åˆ›å»ºä¸€ä¸ªåŒ…å«3ä¸ªå…ƒç´ çš„é“¾è¡¨: 6 4 2
 
-    std::cout << "µÚÒ»¸öÁ´±í:" << std::endl;
+    std::cout << "ç¬¬ä¸€ä¸ªé“¾è¡¨çš„å†…å®¹:" << std::endl;
     ListTraverse_L(L1, PrintElem);
-    std::cout << "\nµÚ¶ş¸öÁ´±í:" << std::endl;
+    std::cout << "\nç¬¬äºŒä¸ªé“¾è¡¨çš„å†…å®¹:" << std::endl;
     ListTraverse_L(L2, PrintElem);
 
     MergeList_L(L1, L2, L3);
-    std::cout << "\nºÏ²¢ºóµÄÁ´±í:" << std::endl;
+    std::cout << "\nåˆå¹¶åçš„é“¾è¡¨å†…å®¹:" << std::endl;
     ListTraverse_L(L3, PrintElem);
     std::cout << std::endl;
 }
 
-void menu() {
+// æ‰“å°é™æ€é“¾è¡¨ä¸­çš„æ‰€æœ‰å…ƒç´ 
+void PrintList(SLinkList& space, int S) {
+    int curr = space[S].cur;
+    std::cout << "é“¾è¡¨å†…å®¹: ";
+    while (curr != 0) {
+        std::cout << space[curr].data << " ";
+        curr = space[curr].cur;
+    }
+    std::cout << std::endl;
+}
 
+// æµ‹è¯•SLinkList
+void TestSLinkList() {
+    SLinkList space;
+    int S;  // å¤´æŒ‡é’ˆ
+
+    std::cout << "æµ‹è¯•1:ç©ºé›†çš„å¯¹ç§°å·®" << std::endl;
+    std::cout << "è¾“å…¥:0 0" << std::endl;
+    difference(space, S);
+    PrintList(space, S);
+
+    std::cout << "\næµ‹è¯•2:A={1,2,3}, B={2,4}" << std::endl;
+    std::cout << "è¾“å…¥:3 2" << std::endl;
+    std::cout << "1 2 3" << std::endl;
+    std::cout << "2 4" << std::endl;
+    difference(space, S);
+    PrintList(space, S);
+
+    std::cout << "\næµ‹è¯•3:é‡å¤å…ƒç´ æµ‹è¯• A={1,1,2}, B={2,2,3}" << std::endl;
+    std::cout << "è¾“å…¥:3 3" << std::endl;
+    std::cout << "1 1 2" << std::endl;
+    std::cout << "2 2 3" << std::endl;
+    difference(space, S);
+    PrintList(space, S);
+
+    // éªŒè¯é“¾è¡¨ç»“æ„
+    if (ValidateSLinkList(space, S)) {
+        std::cout << "é“¾è¡¨ç»“æ„å®Œæ•´æ€§æ£€æµ‹é€šè¿‡" << std::endl;
+    } else {
+        std::cout << "è­¦å‘Š:é“¾è¡¨å¯èƒ½å­˜åœ¨å¾ªç¯æˆ–å…¶ä»–é—®é¢˜!" << std::endl;
+    }
+}
+
+// æµ‹è¯•ç›®å½•
+void TestDir() {
+    system("chcp 65001");//å°†æ§åˆ¶å°ç¼–ç è®¾ç½®ä¸ºUTF-8
+    int choice;
+    
+    try {
+        cout << "======================\n"
+             << "    æ•°æ®ç»“æ„æµ‹è¯•èœå•    \n"
+             << "======================\n"
+             << "1. æµ‹è¯•SqList\n"
+             << "2. æµ‹è¯•LinkList\n"
+             << "3. æµ‹è¯•SLinkList\n"
+             << "0. é€€å‡ºmenu\n"
+             << "----------------------\n"
+             << "è¯·è¾“å…¥é€‰æ‹© (0-3): ";
+             
+        if (!(cin >> choice)) {
+            // å¤„ç†è¾“å…¥éæ•°å­—çš„æƒ…å†µ
+            cin.clear();  // æ¸…é™¤é”™è¯¯çŠ¶æ€
+            cin.ignore(numeric_limits<streamsize>::max(), '\n');  // æ¸…ç©ºè¾“å…¥ç¼“å†²åŒº
+            throw invalid_argument("è¾“å…¥å¿…é¡»æ˜¯number");
+        }
+        
+        switch (choice) {
+        case 1:
+            TestSqList();
+            break;
+        case 2:
+            TestLinkList();
+            break;
+        case 3:
+            TestSLinkList();
+            break;
+        case 0:
+            cout << "é€€å‡ºç¨‹åº\n";
+            break;
+        default:
+            throw invalid_argument("é€‰æ‹©å¿…é¡»åœ¨0-3ä¹‹é—´!");
+        }
+    }
+    catch (const invalid_argument& e) {
+        cout << "é”™è¯¯: " << e.what() << "\n";
+    }
+    catch (const exception& e) {
+        cout << "å‘ç”ŸæœªçŸ¥é”™è¯¯: " << e.what() << "\n";
+    }
+    catch (...) {
+        cout << "å‘ç”ŸæœªçŸ¥å¼‚å¸¸!\n";
+    }
 }
